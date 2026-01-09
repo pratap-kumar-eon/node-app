@@ -14,6 +14,10 @@ app.get("/", (req: Request, res: Response) => {
   return res.send("It's working bro 🙌");
 });
 
+app.get("/health", (req: Request, res: Response) => {
+  return res.status(200).json({ status: "OK", message: "Server is healthy" });
+}
+
 
 
 
